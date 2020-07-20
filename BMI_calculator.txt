@@ -1,0 +1,72 @@
+#BMI Calculator - 2020/07/20
+
+def convert_weight_to_kg(weight):
+    weightkg = int(weight) * float(.45)
+    return weightkg
+
+def convert_height_to_meters(height):
+    heightm = int(height) * float(.0254)
+    return heightm
+ 
+def calculate_BMI(weightkg, heightm):
+    BMI = weightkg / heightm ** 2
+    return BMI
+
+def return_BMI_category(BMI):
+    if BMI <= 18.5:
+        print("You have a BMI of {0}, which is in the {1} category.".format(BMI, "Underweight"))
+    elif BMI > 18.5 and BMI <= 24.9:
+        print("You have a BMI of {0}, which is in the {1} category.".format(BMI, "Normal Weight"))
+    elif BMI > 25 and BMI <= 29.9:
+        print("You have a BMI of {0}, which is in the {1} category.".format(BMI, "Overweight"))
+    elif BMI > 30:
+        print("You have a BMI of {0}, which is in the {1} category.".format(BMI, "Obese"))
+
+def main_program_loop():
+    while True:
+        print("Please enter your weight in pounds.")
+        weight = input()
+        print("Please enter your height in inches.")
+        height = input()
+        weightkg = convert_weight_to_kg(weight)
+        heightm = convert_height_to_meters(height)
+        BMI = calculate_BMI(weightkg, heightm)
+        BMI_rounded = round(BMI, 2)
+        return_BMI_category(BMI_rounded)
+        print("Would you like to calculate another BMI? y/n")
+        again = input()
+        if again == "y":
+            continue
+        elif again == "n":
+            break
+        else:
+            again = input("Would you like to calculate another BMI? y/n")
+        
+main_program_loop()        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
