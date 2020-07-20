@@ -14,13 +14,13 @@ def calculate_BMI(weightkg, heightm):
 
 def return_BMI_category(BMI):
     if BMI <= 18.5:
-        print("You have a BMI of {0}, which is in the {1} category.".format(BMI, "Underweight"))
+        print("You have a BMI of {0}, which is in the {1} category.".format(BMI, "Too skinny"))
     elif BMI > 18.5 and BMI <= 24.9:
-        print("You have a BMI of {0}, which is in the {1} category.".format(BMI, "Normal Weight"))
+        print("You have a BMI of {0}, which is in the {1} category.".format(BMI, "Okay"))
     elif BMI > 25 and BMI <= 29.9:
-        print("You have a BMI of {0}, which is in the {1} category.".format(BMI, "Overweight"))
+        print("You have a BMI of {0}, which is in the {1} category.".format(BMI, "Uh oh"))
     elif BMI > 30:
-        print("You have a BMI of {0}, which is in the {1} category.".format(BMI, "Obese"))
+        print("You have a BMI of {0}, which is in the {1} category.".format(BMI, "Oh Lawd he coming"))
 
 def main_program_loop():
     while True:
